@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+ <p id = 'output'></p> 
+ <form id = "myfrom">
+  Fname : <input type="text" id = "id1">
+  Lname : <input type="text" id = "id2" >
+
+  <input type="button" value="clickMe" onClick = "myfun()" >
+
+</form>
+<script>
+
+function myfun(){
+   var e1 = event.target.parentElement
+  output(" welcome " + e1.id1.value + " " + e1.id2.value )
+  document.getElementById("myfrom").reset()
+}
+
+function output(m){
+   var result = document.getElementById("output")
+   result.innerHTML = m
+}
+
+</script>
+</body>
+</html>
